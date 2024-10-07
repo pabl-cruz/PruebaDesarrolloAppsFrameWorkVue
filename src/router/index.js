@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/counter',
       name: 'counter',
       component: () => import('../views/CounterView.vue')
+    },
+    {
+      path: '/parentchild',
+      name: 'parentchild',
+      component: () => import('../views/ParentChildView.vue')
     }
   ]
 })

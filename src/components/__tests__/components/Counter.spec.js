@@ -6,12 +6,13 @@ import CounterComponent from '@/components/Counter.vue'
 import { useCounterStore } from '@/stores/counter'
 
 describe('CounterComponent', () => {
-  //cargar instancia de pinia en prueba
+  //cargar instancia de pinia antes de empezar cada prueba
   beforeEach(() => {
     const pinia = createPinia()
     setActivePinia(pinia)
   })
   it('Se coloca y retorna valor inicial en contador', () => {
+    //se monta componente y se carga plugin global de instancia de pinia
     mount(CounterComponent, {
       global: {
         plugins: [createPinia()]
@@ -37,7 +38,7 @@ describe('CounterComponent', () => {
     //esperar a que se gatille accion click en btnaumentar
     await increase.trigger('click')
     const counterAfter = Number(wrapper.find('#counterHTML').text())
-
+    //esperar que valor del contador antes de gatillar boton de aumento de contador, sea menos que valor despues del evento de gatillado
     expect(counterBefore).toBeLessThan(counterAfter)
   })
 
