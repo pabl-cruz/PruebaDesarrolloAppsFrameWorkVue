@@ -19,7 +19,7 @@ El build de producción alojado en Firebase Hosting se puede ver [acá](https://
 
 ## Carácteristicas
 
-El examen consiste de 3 ejercicios, de los cuales 2 se pueden acceder en las vistas de la App.
+El examen consiste de 3 ejercicios, de los cuales 2 se pueden acceder en las vistas de la App:
 
     - 1. Manejo de estado con Pinia, utilizando un contador que aumenta y disminuye su valor mediante botones y pruebas unitarias para recibir un valor inicial en el contador, y probar sus funcionalidades de incremento y decremento.
 
