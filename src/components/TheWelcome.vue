@@ -1,83 +1,58 @@
-<script setup>
-import WelcomeItem from './WelcomeItem.vue'
-</script>
+<script setup></script>
 
 <template>
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>Documen</template>
-
-    Vue’s
-    <a href="https://vuejs.org/" target="_blank" rel="noopener">official documentation</a>
-    provides you with all information you need to get started.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <ToolingIcon />
-    </template>
-    <template #heading>Tooling</template>
-
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener">Vite</a>. The
-    recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank" rel="noopener">Volar</a>. If
-    you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank" rel="noopener">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank" rel="noopener"
-      >Cypress Component Testing</a
-    >.
-
-    <br />
-
-    More instructions are available in <code>README.md</code>.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <EcosystemIcon />
-    </template>
-    <template #heading>Ecosystem</template>
-
-    Get official tools and libraries for your project:
-    <a href="https://pinia.vuejs.org/" target="_blank" rel="noopener">Pinia</a>,
-    <a href="https://router.vuejs.org/" target="_blank" rel="noopener">Vue Router</a>,
-    <a href="https://test-utils.vuejs.org/" target="_blank" rel="noopener">Vue Test Utils</a>, and
-    <a href="https://github.com/vuejs/devtools" target="_blank" rel="noopener">Vue Dev Tools</a>. If
-    you need more resources, we suggest paying
-    <a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">Awesome Vue</a>
-    a visit.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>Community</template>
-
-    Got stuck? Ask your question on
-    <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Vue Land</a>, our official
-    Discord server, or
-    <a href="https://stackoverflow.com/questions/tagged/vue.js" target="_blank" rel="noopener"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a href="https://news.vuejs.org" target="_blank" rel="noopener">our mailing list</a> and follow
-    the official
-    <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">@vuejs</a>
-    twitter account for latest news in the Vue world.
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <SupportIcon />
-    </template>
-    <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its sustainability. You can help
-    us by
-    <a href="https://vuejs.org/sponsor/" target="_blank" rel="noopener">becoming a sponsor</a>.
-  </WelcomeItem>
+  <ul>
+    <li>
+      <h3>Bienvenidos</h3>
+      En esta página se pueden ver los 3 ejercicios indicados para el examen de desarrollo de apps
+      en framework Vue. Haz clic en las secciones del navbar para ver los ejercicios.
+    </li>
+    <li>
+      <h3>
+        Ejercicio 1 - Contador Contador de números para aumentar y disminuir usando la store de
+        Pinia.
+      </h3>
+      Haz clic en
+      <strong>Contador</strong> para verlo en acción. Para las pruebas unitarias de este ejercicio,
+      corre
+      <pre>npm run test:unit</pre>
+      en la terminal en los archivos <strong>Counter.spec.js</strong> en src/_test_/components y
+      <strong>Counterview.spec.js</strong> en src/_test_/views
+    </li>
+    <li>
+      <h3>Ejercicio 2 - Navegación con Vue Router</h3>
+      Se utiliza el formato de vistas de Vue Router para navegar por los ejercicios y ver las vistas
+      por defecto. En todas las vistas de la aplicación se realizan pruebas unitarias para validar
+      la existencia de los componentes que las controlan.
+      <br />
+      <br />
+      En la ruta src/_tests_/views estan los archivos de pruebas unitarias para ejecutarlas con el
+      comando
+      <pre>npm run test:unit</pre>
+    </li>
+    <li>
+      <h3>Ejercicio 3 - Comunicación entre componentes</h3>
+      Mediante el uso de emits, se realiza la comunicación entre el componente
+      <strong>Child</strong> con <strong>Parent</strong> mediante el traspaso del valor de un titulo
+      escrito en un formulario. Puedes verlo en acción haciendo clic en
+      <strong>Comunicación Componentes</strong> en la navbar.
+      <br />
+      <br />
+      En la ruta src/_tests_/views, en el archivo <strong>ParentChildView.spec.js</strong> se pueden
+      encontrar las pruebas unitarias para validar el traspaso de un texto al hacer click en el
+      boton de carga. Se ejecuta el comando
+      <pre>npm run test:unit</pre>
+      para correr las pruebas.
+    </li>
+    <li>
+      <h3>Subido a Firebase Hosting</h3>
+      Si logras ver esta página, significa que hice un build de producción e hice el deployment para
+      subirlo a Firebase Hosting para verlo desde la nube en cualquier navegador. :D
+    </li>
+  </ul>
 </template>
+<style scoped>
+li {
+  margin: 2rem 0;
+}
+</style>

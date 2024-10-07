@@ -12,7 +12,9 @@ const store = useCounterStore()
 <template>
   <div>
     <h2>Ejercicio 1 - Contador</h2>
-    <p id="counterHTML">{{ store.count }}</p>
+    <p id="counterHTML">
+      <strong>{{ store.count }}</strong>
+    </p>
     <div>
       <!--llamar funciones de store yt asignarlas a botones-->
       <button @click="store.increment" id="increase">Incrementar Contador</button>
@@ -20,3 +22,9 @@ const store = useCounterStore()
     </div>
   </div>
 </template>
+
+<style scoped>
+#counterHTML {
+  margin: 1rem 0;
+}
+</style>
